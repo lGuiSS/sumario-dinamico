@@ -5,13 +5,13 @@
            xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
            xsi:type="TaskPaneApp">
   <Id>e7b66cea-adb3-4fec-ac33-ab5115edc2f1</Id>
-  <Version>1.0.0.0</Version>
+  <Version>1.0.1.0</Version>
   <ProviderName>Guilherme</ProviderName>
   <DefaultLocale>pt-BR</DefaultLocale>
   <DisplayName DefaultValue="Sumário Dinâmico"/>
   <Description DefaultValue="Gera sumário dinâmico baseado nas seções do PowerPoint com linha de progresso animada, modo compacto e cores personalizáveis."/>
-  <IconUrl DefaultValue="https://lguiss.github.io/sumario-dinamico/assets/icon-32.png"/>
-  <HighResolutionIconUrl DefaultValue="https://lguiss.github.io/sumario-dinamico/assets/icon-80.png"/>
+  <IconUrl DefaultValue="https://lguiss.github.io/sumario-dinamico/assets/icon-32.png?v=2"/>
+  <HighResolutionIconUrl DefaultValue="https://lguiss.github.io/sumario-dinamico/assets/icon-80.png?v=2"/>
   <SupportUrl DefaultValue="https://github.com/seu-usuario/sumario-dinamico"/>
   <AppDomains>
     <AppDomain>https://lguiss.github.io/sumario-dinamico</AppDomain>
@@ -126,9 +126,9 @@
     </Hosts>
     <Resources>
       <bt:Images>
-        <bt:Image id="icon16" DefaultValue="https://lguiss.github.io/sumario-dinamico/assets/icon-16.png"/>
-        <bt:Image id="icon32" DefaultValue="https://lguiss.github.io/sumario-dinamico/assets/icon-32.png"/>
-        <bt:Image id="icon80" DefaultValue="https://lguiss.github.io/sumario-dinamico/assets/icon-80.png"/>
+        <bt:Image id="icon16" DefaultValue="https://lguiss.github.io/sumario-dinamico/assets/icon-16.png?v=2"/>
+        <bt:Image id="icon32" DefaultValue="https://lguiss.github.io/sumario-dinamico/assets/icon-32.png?v=2"/>
+        <bt:Image id="icon80" DefaultValue="https://lguiss.github.io/sumario-dinamico/assets/icon-80.png?v=2"/>
       </bt:Images>
       <bt:Urls>
         <bt:Url id="functionFile" DefaultValue="https://lguiss.github.io/sumario-dinamico/commands.html"/>
