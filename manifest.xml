@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
+           xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides"
+           xsi:type="TaskPaneApp">
+  <Id>e7b66cea-adb3-4fec-ac33-ab5115edc2f1</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>Guilherme</ProviderName>
+  <DefaultLocale>pt-BR</DefaultLocale>
+  <DisplayName DefaultValue="Sumário Dinâmico"/>
+  <Description DefaultValue="Gera sumário dinâmico baseado nas seções do PowerPoint com linha de progresso animada, modo compacto e cores personalizáveis."/>
+  <IconUrl DefaultValue="https://lguiss.github.io/sumario-dinamico/assets/icon-32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://lguiss.github.io/sumario-dinamico/assets/icon-80.png"/>
+  <SupportUrl DefaultValue="https://github.com/seu-usuario/sumario-dinamico"/>
+  <AppDomains>
+    <AppDomain>https://lguiss.github.io/sumario-dinamico</AppDomain>
+  </AppDomains>
+  <Hosts>
+    <Host Name="Presentation"/>
+  </Hosts>
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://lguiss.github.io/sumario-dinamico/taskpane.html"/>
+  </DefaultSettings>
+  <Permissions>ReadWriteDocument</Permissions>
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+    <Hosts>
+      <Host xsi:type="Presentation">
+        <DesktopFormFactor>
+          <GetStarted>
+            <Title resid="getStartedTitle"/>
+            <Description resid="getStartedDescription"/>
+            <LearnMoreUrl resid="learnMoreUrl"/>
+          </GetStarted>
+          <FunctionFile resid="functionFile"/>
+          <ExtensionPoint xsi:type="PrimaryCommandSurface">
+            <OfficeTab id="TabHome">
+              <Group id="SumarioDinamicoGroup">
+                <Label resid="groupLabel"/>
+                <Icon>
+                  <bt:Image size="16" resid="icon16"/>
+                  <bt:Image size="32" resid="icon32"/>
+                  <bt:Image size="80" resid="icon80"/>
+                </Icon>
+                <Control xsi:type="Button" id="btnGerarTopo">
+                  <Label resid="btnGerarTopoLabel"/>
+                  <Supertip>
+                    <Title resid="btnGerarTopoTitle"/>
+                    <Description resid="btnGerarTopoDesc"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="icon16"/>
+                    <bt:Image size="32" resid="icon32"/>
+                    <bt:Image size="80" resid="icon80"/>
+                  </Icon>
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionName>gerarSumarioTopo</FunctionName>
+                  </Action>
+                </Control>
+                <Control xsi:type="Button" id="btnGerarRodape">
+                  <Label resid="btnGerarRodapeLabel"/>
+                  <Supertip>
+                    <Title resid="btnGerarRodapeTitle"/>
+                    <Description resid="btnGerarRodapeDesc"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="icon16"/>
+                    <bt:Image size="32" resid="icon32"/>
+                    <bt:Image size="80" resid="icon80"/>
+                  </Icon>
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionName>gerarSumarioRodape</FunctionName>
+                  </Action>
+                </Control>
+                <Control xsi:type="Button" id="btnAtualizar">
+                  <Label resid="btnAtualizarLabel"/>
+                  <Supertip>
+                    <Title resid="btnAtualizarTitle"/>
+                    <Description resid="btnAtualizarDesc"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="icon16"/>
+                    <bt:Image size="32" resid="icon32"/>
+                    <bt:Image size="80" resid="icon80"/>
+                  </Icon>
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionName>atualizarSumario</FunctionName>
+                  </Action>
+                </Control>
+                <Control xsi:type="Button" id="btnRemover">
+                  <Label resid="btnRemoverLabel"/>
+                  <Supertip>
+                    <Title resid="btnRemoverTitle"/>
+                    <Description resid="btnRemoverDesc"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="icon16"/>
+                    <bt:Image size="32" resid="icon32"/>
+                    <bt:Image size="80" resid="icon80"/>
+                  </Icon>
+                  <Action xsi:type="ExecuteFunction">
+                    <FunctionName>removerSumario</FunctionName>
+                  </Action>
+                </Control>
+                <Control xsi:type="Button" id="btnAbrirPainel">
+                  <Label resid="btnAbrirPainelLabel"/>
+                  <Supertip>
+                    <Title resid="btnAbrirPainelTitle"/>
+                    <Description resid="btnAbrirPainelDesc"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="icon16"/>
+                    <bt:Image size="32" resid="icon32"/>
+                    <bt:Image size="80" resid="icon80"/>
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>SumarioTaskpane</TaskpaneId>
+                    <SourceLocation resid="taskpaneUrl"/>
+                  </Action>
+                </Control>
+              </Group>
+            </OfficeTab>
+          </ExtensionPoint>
+        </DesktopFormFactor>
+      </Host>
+    </Hosts>
+    <Resources>
+      <bt:Images>
+        <bt:Image id="icon16" DefaultValue="https://lguiss.github.io/sumario-dinamico/assets/icon-16.png"/>
+        <bt:Image id="icon32" DefaultValue="https://lguiss.github.io/sumario-dinamico/assets/icon-32.png"/>
+        <bt:Image id="icon80" DefaultValue="https://lguiss.github.io/sumario-dinamico/assets/icon-80.png"/>
+      </bt:Images>
+      <bt:Urls>
+        <bt:Url id="functionFile" DefaultValue="https://lguiss.github.io/sumario-dinamico/commands.html"/>
+        <bt:Url id="taskpaneUrl" DefaultValue="https://lguiss.github.io/sumario-dinamico/taskpane.html"/>
+        <bt:Url id="learnMoreUrl" DefaultValue="https://github.com/seu-usuario/sumario-dinamico"/>
+      </bt:Urls>
+      <bt:ShortStrings>
+        <bt:String id="groupLabel" DefaultValue="Sumário Dinâmico"/>
+        <bt:String id="btnGerarTopoLabel" DefaultValue="Topo"/>
+        <bt:String id="btnGerarRodapeLabel" DefaultValue="Rodapé"/>
+        <bt:String id="btnAtualizarLabel" DefaultValue="Atualizar"/>
+        <bt:String id="btnRemoverLabel" DefaultValue="Remover"/>
+        <bt:String id="btnAbrirPainelLabel" DefaultValue="Configurações"/>
+        <bt:String id="getStartedTitle" DefaultValue="Comece com Sumário Dinâmico"/>
+        <bt:String id="btnGerarTopoTitle" DefaultValue="Gerar Sumário no Topo"/>
+        <bt:String id="btnGerarRodapeTitle" DefaultValue="Gerar Sumário no Rodapé"/>
+        <bt:String id="btnAtualizarTitle" DefaultValue="Atualizar Sumário"/>
+        <bt:String id="btnRemoverTitle" DefaultValue="Remover Sumário"/>
+        <bt:String id="btnAbrirPainelTitle" DefaultValue="Abrir Painel de Configurações"/>
+      </bt:ShortStrings>
+      <bt:LongStrings>
+        <bt:String id="getStartedDescription" DefaultValue="Clique em 'Topo' ou 'Rodapé' para gerar o sumário baseado nas seções da apresentação. Use o painel de configurações para personalizar cores, fonte, animações e mais."/>
+        <bt:String id="btnGerarTopoDesc" DefaultValue="Cria o sumário dinâmico na parte superior dos slides, com faixa de fundo opcional e linha de progresso."/>
+        <bt:String id="btnGerarRodapeDesc" DefaultValue="Cria o sumário dinâmico na parte inferior dos slides, com faixa de fundo e linha de progresso."/>
+        <bt:String id="btnAtualizarDesc" DefaultValue="Atualiza todos os sumários existentes mantendo a posição configurada como padrão."/>
+        <bt:String id="btnRemoverDesc" DefaultValue="Remove todos os elementos de sumário e progresso da apresentação."/>
+        <bt:String id="btnAbrirPainelDesc" DefaultValue="Abre o painel lateral com todas as opções de personalização: cores, fonte, posicionamento, animações, exclusões."/>
+      </bt:LongStrings>
+    </Resources>
+  </VersionOverrides>
+</OfficeApp>
